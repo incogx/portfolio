@@ -146,5 +146,3 @@ Automatic GitHub Actions deploy to gh-pages
 
 Abdul Kaif — AI Engineer & Full Stack Developer
 GitHub: https://github.com/incogx
-
-⭐ If you found this helpful
