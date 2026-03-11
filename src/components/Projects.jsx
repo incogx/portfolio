@@ -52,13 +52,14 @@ function ProjectCard({ project, index }) {
       </div>
 
       {/* Title */}
-      <div>
-        <h3 className="text-xl font-bold text-white group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:bg-clip-text transition-all duration-300"
-          style={{ backgroundImage: `linear-gradient(90deg, ${project.color}, ${project.accentColor})` }}
+      <div className="min-h-[82px] flex flex-col items-start">
+        <h3
+          className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent transition-all duration-300 group-hover:from-cyan-300 group-hover:to-blue-300"
         >
           {project.title}
         </h3>
-        <p className="text-sm text-slate-500 mt-0.5">{project.subtitle}</p>
+        <p className="text-sm text-slate-400 mt-0.5">{project.subtitle}</p>
+        <div className="h-[2px] w-16 bg-gradient-to-r from-cyan-400 to-blue-400 mt-2 mb-1 rounded-full shadow-[0_0_12px_rgba(34,211,238,0.35)]" />
       </div>
 
       {/* Description */}

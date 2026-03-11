@@ -30,7 +30,7 @@ export const projects = [
       { step: '05', title: 'Circular Output', desc: 'All outputs feed back as agricultural inputs — zero-waste closed loop.' },
     ],
 
-    technologies: ['Python', 'Arduino', 'IoT Sensors (DHT22, pH, CO2)', 'MQTT Protocol', 'Raspberry Pi', 'React Dashboard', 'FastAPI'],
+    technologies: ['C++', 'ESP32', 'IoT Sensors (DHT22, Peltier, CO2)', 'React Native - Mobile App', 'Supabase Database', 'Data Analytics Dashboard'],
 
     impact: [
       'Reduces organic waste volume by up to 80%',
@@ -73,7 +73,7 @@ export const projects = [
       { step: '05', title: 'XAI Visualization', desc: 'Grad-CAM heatmap overlaid on original image for explainability.' },
     ],
 
-    technologies: ['Python', 'TensorFlow', 'TensorFlow Lite', 'OpenCV', 'Android (Java/Kotlin)', 'Grad-CAM', 'U-Net', 'MobileNetV3'],
+    technologies: ['Python', 'TensorFlow', 'OpenCV', 'React Native', 'Grad-CAM'],
 
     impact: [
       'Enables offline AI diagnostics for low-connectivity regions',
@@ -89,7 +89,7 @@ export const projects = [
     subtitle: 'Secure Anti-Proxy System',
     shortDesc:
       'Secure multi-layer attendance system combining real-time QR code generation with biometric fingerprint authentication, eliminating proxy attendance in academic and corporate environments.',
-    tags: ['FastAPI', 'React', 'Biometrics', 'QR Code', 'Security'],
+    tags: [ 'React','React Native', 'Biometrics', 'QR Code', 'Security'],
     color: '#f59e0b',
     accentColor: '#fbbf24',
     icon: '🔐',
@@ -98,7 +98,7 @@ export const projects = [
     github: 'https://github.com/incogx',
 
     overview:
-      'A tamper-proof attendance infrastructure combining time-limited QR codes with biometric fingerprint verification. The two-factor verification model ensures that presence is confirmed by both physical location (QR scan) and biological identity (fingerprint), completely eliminating proxy attendance.',
+      'A web-based attendance platform built with React and Supabase that uses QR codes for secure student verification. It automates attendance records, session management, and analytics for efficient classroom monitoring.',
 
     problem:
       'Proxy attendance fraud is endemic in academic and corporate settings, undermining the integrity of attendance records and wasting institutional resources. Existing systems rely on single-factor verification (RFID cards or manual signs) that are trivially circumvented.',
@@ -114,7 +114,7 @@ export const projects = [
       { step: '05', title: 'Approval Workflow', desc: 'Faculty reviews records; HOD signs off on consolidated reports.' },
     ],
 
-    technologies: ['React', 'FastAPI', 'Python', 'PostgreSQL', 'WebSockets', 'QR Generation Library', 'Biometric SDK', 'JWT Authentication'],
+    technologies: ['React', 'React Native', 'JavaScript', 'Supabase','QR Generation Library', 'Biometric SDK', 'JWT Authentication'],
 
     impact: [
       'Reduces proxy attendance to near-zero',
@@ -171,7 +171,7 @@ export const projects = [
     subtitle: 'Learning Management System',
     shortDesc:
       'Full-stack LMS built during a software engineering internship at Tecknots featuring user authentication, course management, student dashboards, and learning analytics.',
-    tags: ['React', 'FastAPI', 'Python', 'REST API', 'Dashboard'],
+    tags: ['React', 'FastAPI', 'JavaScript', 'Dashboard'],
     color: '#00FFFF',
     accentColor: '#7dd3fc',
     icon: '📚',
@@ -196,7 +196,7 @@ export const projects = [
       { step: '05', title: 'Analytics Module', desc: 'Engagement metrics, completion rates, and cohort-level analytics for instructors.' },
     ],
 
-    technologies: ['React 18', 'FastAPI', 'Python', 'PostgreSQL', 'JWT', 'REST API', 'Tailwind CSS', 'Chart.js'],
+    technologies: ['React 18', 'FastAPI', 'JavaScript', 'PostgreSQL', 'JWT', 'REST API', 'Tailwind CSS', 'Chart.js'],
 
     impact: [
       'Deployed as internal LMS for Tecknots client delivery',
@@ -264,5 +264,33 @@ export const timeline = [
     title: 'Software Engineer Intern – Tecknots',
     desc: 'Delivered a full-stack LMS platform for production deployment; gained industry-grade React and FastAPI experience.',
     color: '#00FFFF',
+  },
+]
+
+export const achievements = [
+  {
+    icon: 'trophy',
+    text: 'National Level Hackathon Winner – BioLoop Circular Waste Intelligence System',
+    color: '#facc15',
+  },
+  {
+    icon: 'medal',
+    text: 'IEEE MakerFair Finalist – Robotics Innovation Project',
+    color: '#d1d5db',
+  },
+  {
+    icon: 'rocket',
+    text: 'Smart India Hackathon – Top 5 Finalist (500+ teams)',
+    color: '#22d3ee',
+  },
+  {
+    icon: 'briefcase',
+    text: 'Software Engineer Intern – Tecknots (Building LMS Platform)',
+    color: '#86efac',
+  },
+  {
+    icon: 'graduation',
+    text: 'BE Computer Science (AI & Robotics) – Sathyabama University (2027)',
+    color: '#60a5fa',
   },
 ]

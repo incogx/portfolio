@@ -1,6 +1,8 @@
 import { motion } from 'framer-motion'
 import { useEffect, useState, Suspense } from 'react'
+import { PDFDownloadLink } from '@react-pdf/renderer'
 import HeroCanvas from './3d/HeroCanvas'
+import PortfolioPDF from './PortfolioPDF'
 
 const roles = [
   'AI Systems Builder',
@@ -129,16 +131,20 @@ export default function Hero() {
                 </svg>
               </span>
             </button>
-            <a
-              href="/resume.pdf"
-              download
+            <PDFDownloadLink
+              document={<PortfolioPDF />}
+              fileName="Abdul-Kaif-Portfolio.pdf"
               className="btn-secondary flex items-center gap-2"
             >
-              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-              </svg>
-              Download Resume
-            </a>
+              {({ loading }) => (
+                <>
+                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                  </svg>
+                  {loading ? 'Preparing PDF...' : 'Download Portfolio'}
+                </>
+              )}
+            </PDFDownloadLink>
             <button
               onClick={() => scrollTo('#contact')}
               className="btn-secondary flex items-center gap-2"
