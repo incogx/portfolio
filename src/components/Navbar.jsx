@@ -14,6 +14,7 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
   const location = useLocation()
+  const baseUrl = import.meta.env.BASE_URL
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 40)
@@ -24,7 +25,7 @@ export default function Navbar() {
   const scrollTo = (href) => {
     setMobileOpen(false)
     if (location.pathname !== '/') {
-      window.location.href = '/' + href
+      window.location.href = `${baseUrl}${href}`
       return
     }
     const el = document.querySelector(href)
@@ -68,7 +69,7 @@ export default function Navbar() {
             </button>
           ))}
           <a
-            href="/resume.pdf"
+            href={`${baseUrl}resume.pdf`}
             download
             className="ml-4 px-5 py-2 rounded-full text-sm font-semibold bg-[rgba(0,102,255,0.15)] border border-[rgba(0,102,255,0.4)] text-blue-400 hover:text-white hover:bg-[rgba(0,102,255,0.3)] hover:border-neon-cyan transition-all duration-200"
           >
@@ -109,7 +110,7 @@ export default function Navbar() {
                 </button>
               ))}
               <a
-                href="/resume.pdf"
+                href={`${baseUrl}resume.pdf`}
                 download
                 className="mt-2 px-4 py-3 text-center rounded-full font-semibold bg-gradient-to-r from-electric-blue to-blue-700 text-white"
               >
